@@ -8,6 +8,12 @@ public class CheckNumIsPrimeNumOrNot
     int num=scn.nextInt();
 
     boolean flag=true;
+    if(num<=1)
+    {
+      flag=false;
+    }
+  else
+ {
     for(int i=2;i<num-1;i++)
     {
       if(num%i==0)
@@ -15,6 +21,8 @@ public class CheckNumIsPrimeNumOrNot
         flag=false;
         break;
       }
+    }
+}
       if(flag==true)
       {
         System.out.println("prime number");
@@ -23,6 +31,6 @@ public class CheckNumIsPrimeNumOrNot
       {
       System.out.println("Not prime number");
       }
-    }
+    
   }
 }
