@@ -1,0 +1,18 @@
+package array;
+
+public class LowestAgeAmongDiffAge {
+public static void main(String[] args) {
+	int age[]={12,81,1,90,5};
+	int lowestAge=age[0];
+	for(int i=1;i<=age.length-1;i++)
+	{
+		while(age[i]<lowestAge)
+		{
+			lowestAge=age[i];
+		}
+		
+	}
+	System.out.println("Lowest Age is: "+lowestAge);
+}
+}
+s
