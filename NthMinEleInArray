@@ -1,0 +1,29 @@
+package array;
+
+public class NthMinEleInArray {
+	public static void main(String[] args) {
+		int a[]= {12,1000,5,33};
+		System.out.println(nthMinValue(a,4));
+	}
+	public static int nthMinValue(int a[],int n)
+	{
+		int min=Integer.MAX_VALUE;
+		for(int k=1;k<=n;k++)
+		{
+			min=Integer.MAX_VALUE;
+			for(int i=0;i<=a.length-1;i++)
+			{
+				if(min>a[i])
+				{
+					min=a[i];
+				}	
+			}
+			for(int i=0;i<=a.length-1;i++)
+			{
+				if(min==a[i])
+					a[i]=Integer.MAX_VALUE;
+			}
+		}
+		return min;
+	}
+}
