@@ -1,0 +1,18 @@
+package array;
+
+public class DoWhileLoopAccessArrayEle {
+	public static void main(String[] args) {
+		int []a= new int[4];
+		a[0]=1;
+		a[1]=12;
+		a[2]=80;
+		a[3]=90;
+		int i=0;
+		do
+		{
+			System.out.println("Index is: "+a[i]);
+			i++;
+		}while(i<a.length);
+		}
+	}
+
