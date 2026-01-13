@@ -1,0 +1,30 @@
+package array;
+
+public class PrintSunnyNumInsideAnArray {
+public static void main(String[] args) {
+	int a[]= {8,10,21,30,6};
+	for(int num:a)
+	{
+		if(isSunnyNum(num))
+		{
+			System.out.println("Sunny num is: "+num);
+		}
+	}
+	
+}
+public static boolean isSunnyNum(int num) 
+{
+	
+	int sum=0;
+	sum=num+1;
+	for(int i=1;i*i<=sum;i++)
+	{
+		if(i*i==sum)
+		{
+			return true;
+		}
+	}
+	return false;
+	
+}
+}
