@@ -1,0 +1,50 @@
+package array;
+
+import java.util.Arrays;
+
+public class UnionOfArray {
+	public static void main(String[] args) {
+		int a[]= {1,6,9,10,8};
+		int b[]= {2,8,11,10};
+		System.out.println(Arrays.toString(unionOFArr(a,b)));
+	}
+//	public static int count(int a[],int b[])
+//	{
+//		int count=0;
+//		
+//	}
+public static int[] unionOFArr(int a[],int b[])
+{
+	int res[]=new int[a.length+b.length];
+	int index=0;
+	
+	for(int i=0;i<a.length;i++)
+	{
+		res[index++]=a[i];
+		
+	}
+	
+	for(int i=0;i<b.length;i++)
+	{
+		boolean isPresent=false;
+		for(int j=0;j<a.length;j++)
+		{
+			if(b[i]==a[j])
+			{
+				isPresent=true;
+				break;
+			}
+		}
+	
+		if(!isPresent)
+		{
+			res[index++]=b[i];
+		}	
+	}
+		
+	
+	
+	return res;
+}
+}
+
