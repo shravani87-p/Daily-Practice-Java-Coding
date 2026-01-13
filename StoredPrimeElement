@@ -1,0 +1,49 @@
+package array;
+
+import java.util.Arrays;
+
+public class StoredPrimeElement {
+public static void main(String[] args) {
+	int a[]= {2,4,3,9,11,13,7,31,12};
+	System.out.println(Arrays.toString(Prime(a)));
+}
+public static boolean isPrime(int num)
+{
+int count=0;
+for(int i=1;i<=num;i++)
+{
+	if(num%i==0)
+	{
+		count++;
+	}
+}
+return count==2;
+}
+public static int[] Prime(int a[])
+{
+	int count=0;
+
+	for(int num:a)
+	{
+		if(isPrime(num))
+		{
+			count++;
+		}
+	}
+	int index=0;
+	int[] b=new int[count];
+	for(int num:a)
+	{
+		if(isPrime(num))
+		{
+			b[index]=num;
+			index++;
+		}
+	}
+	return b;
+}
+}
+
+	
+
+
