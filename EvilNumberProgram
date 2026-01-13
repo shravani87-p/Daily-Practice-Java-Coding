@@ -1,0 +1,38 @@
+package array;
+
+import java.util.Arrays;
+
+public class EvilNum {
+public static void main(String[] args) {
+ 	int a[]={5,4,6};
+ 	
+ 	int evil[]=new int[a.length];
+ 	int index=0;
+ 	
+ 	for(int num:a)
+ 	{
+ 		if(isEvilNum(num))
+ 		{
+ 		evil[index]=num;
+ 		index++;
+ 		} 
+ 	}
+ 	int result[]=(Arrays.copyOf(evil, index));
+ 	System.out.println(Arrays.toString(result));
+}
+public static boolean isEvilNum(int num)
+{
+	int count=0;
+	while(num>0)    
+	{
+		int last=num%2;
+		if(last==1)
+		{
+			count++;
+		}
+		num=num/2;
+	}
+	return count%2==0;
+	
+}
+}
