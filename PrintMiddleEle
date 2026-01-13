@@ -1,0 +1,16 @@
+package array;
+
+public class PrintMiddleEle {
+    public static void main(String[] args) {
+        int a[] = {1, 2, 3, 4, 5};
+        System.out.println("Middle element: " + middleEle(a));
+    }
+
+    public static int middleEle(int a[]) {
+        int count = a.length;
+        int middle = count / 2;
+
+        return a[middle];   // works for both odd & even
+    }
+}
+     
