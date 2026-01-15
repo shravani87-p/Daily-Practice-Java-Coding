@@ -1,0 +1,32 @@
+package array;
+
+import java.util.Arrays;
+
+public class SplitPositiveNegativeEleInsideAnArray {
+public static void main(String[] args) {
+	int a[]= {1,-1,-2,9,10};
+	System.out.println(Arrays.toString(splitPNEle(a)));
+}
+public static int[] splitPNEle(int a[])
+{
+	int res[]=new int[a.length];
+	int index=0;
+	for(int i=0;i<a.length;i++)
+	{
+		if(a[i]>0)
+		{
+			res[index]=a[i];
+			index++;
+		}
+	}
+	for(int i=0;i<a.length;i++)
+	{
+		if(a[i]<0)
+		{
+			res[index]=a[i];
+			index++;
+		}
+	}
+	return res;
+}
+}
