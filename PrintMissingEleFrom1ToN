@@ -1,0 +1,25 @@
+package array;
+
+public class PrintMissingEleFrom1ToN {
+public static void main(String[] args) {
+	int []a= {3,2,5,9,7,20};
+	printMissAllEle(a[]);
+}
+public static void printMissAllEle(int a[])
+{
+	int max=max(a);
+	boolean present=new boolean[max+1];
+	
+	for(int arr:a)
+	{
+		present[arr]=true;
+	}
+	for(int i=0;i<=max;i++)
+	{
+		if(!present[i])
+		{
+			System.out.println("Missing Elements are: "+i);
+		}
+	}
+}
+}
