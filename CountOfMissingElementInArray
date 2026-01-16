@@ -1,0 +1,39 @@
+package array;
+
+public class CountOfMissingElementInArray {
+public static void main(String[] args) {
+	int a[]= {1,2,8,7};
+	System.out.println(countOfMissing(a));
+}
+public static int countOfMissing(int a[])
+{
+	int count=0;
+	int max=max(a);
+	boolean present[]=new boolean[max+1];
+	for(int num:a)
+	{
+		present[num]=true;
+	}
+	for(int i=1;i<=max;i++)
+	{
+		if(!present[i])
+		{
+			count++;
+			System.out.println("Missing Elements are: "+i);
+		}
+	}
+	return count;
+}
+public static int max(int a[])
+{
+int max=a[0];
+for(int i=1;i<a.length;i++)
+{
+	if(a[i]>max)
+	{
+		max=a[i];
+	}
+}
+return max;
+}
+}
