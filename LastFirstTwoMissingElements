@@ -1,0 +1,37 @@
+package array;
+
+public class LastFirstTwoMissingElements {
+public static void main(String[] args) {
+	int a[]= {1,8,2,6,3};
+	lastFirstTwoMissEle(a);
+}
+public static void lastFirstTwoMissEle(int a[])
+{
+	int count=0;
+	int max=max(a);
+	boolean present[]=new boolean[max+1];
+	for(int num: a)
+	{
+		present[num]=true;
+	}
+	for(int i=max;i>=1;i--)
+	{
+		if(!present[i] && count<2)
+		{
+			count++;
+			System.out.println("Last first two missing elements: "+i);
+		}
+	}
+	
+}
+public static int max(int a[])
+{
+	int max=a[0];
+	for(int i=1;i<a.length;i++)
+	{
+		if(a[i]>max)
+			max=a[i];
+	}
+	return max;
+}
+}
