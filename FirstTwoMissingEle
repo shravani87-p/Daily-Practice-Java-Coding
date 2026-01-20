@@ -1,0 +1,38 @@
+package array;
+
+public class FirstTwoMissingEle {
+public static void main(String []args)
+{
+	int a[]= {1,5,6,8};
+	firstTwoMissingE(a);
+}
+public static void firstTwoMissingE(int a[])
+{
+	int count=0;
+	int max=max(a);
+	boolean present[]=new boolean[max+1];
+	for(int num:a)
+	{
+		present[num]=true;
+	}
+	for(int i=1;i<=max;i++)
+	{
+		if(!present[i] && count<2)
+		{
+			count++;
+			System.out.println("Missing two missing ele:  "+i);
+		}
+		
+	}
+}
+public static int max(int a[])
+{
+	int max=a[0];
+	for(int i=1;i<a.length;i++)
+	{
+		if(a[i]>max)
+			max=a[i];
+	}
+	return max;
+}
+}
