@@ -1,0 +1,18 @@
+package array;
+
+public class MaxEleInArray {
+public static void main(String[] args) {
+	int a[]= {1,270,8,90};
+	System.out.println(max(a));
+}
+public static int max(int a[])
+{
+	int max=a[0];
+	for(int i=1;i<a.length;i++)
+	{
+		if(a[i]>max)
+			max=a[i];
+	}
+	return max;
+}
+}
