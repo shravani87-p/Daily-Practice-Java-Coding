@@ -1,0 +1,37 @@
+package array;
+
+public class LastFirstMissingElement {
+public static void main(String [] args)
+{
+	int a[]= {7,8,1,6,4};
+	lastFirstMissing(a);
+}
+public static void lastFirstMissing(int a[])
+{
+	int max=max(a);
+	int count=0;
+	boolean present[]=new boolean[max+1];
+	for(int num:a)
+	{
+		present[num]=true;
+	}
+	for(int i=max ;i>=1;i--)
+	{
+		if(!present[i] && count<1)
+		{
+			count++;
+			System.out.println("Last missing element is: "+i);
+		}
+	}
+}
+public static int max(int a[])
+{
+	int max=a[0];
+	for(int i=0;i<a.length;i++)
+	{
+		if(a[i]>max)
+		max=a[i];
+	}
+	return max;
+}
+}
